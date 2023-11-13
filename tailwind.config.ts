@@ -17,7 +17,7 @@ const config: Config = {
   // },
   daisyui: {
     themes: [
-      "dark", "cmyk",
+      "dark", "cmyk", "cupcake",
       {
         mytheme: {
           "primary": "#ff0000",
@@ -40,12 +40,7 @@ const config: Config = {
           "neutral": "#3d4451",
           "base-100": "#ffffff",
         },
-        cupcake2: {
-          ...require("daisyui/src/theming/themes")["[data-theme=cupcake]"],
-        },
-        cupcake: {
-          ...require("daisyui/src/theming/themes")["[data-theme=cmyk]"],
-        },
+  
         light: {
           ...require("daisyui/src/theming/themes")["[data-theme=light]"],
           // "primary": "#FF4400",

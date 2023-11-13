@@ -14,6 +14,10 @@
 [data-theme='pink'] {
   --my-color: #a3268c;
 }
+[data-theme='cupcake'] {
+  --my-color: pink;
+}
+
 [data-theme="mytheme"] .btn {
   border-width: 2px;
   border-color: black;
