@@ -9,6 +9,7 @@
 }
 [data-theme='dark'] {
   --my-color: #000;
+  color: white;
 }
 [data-theme='pink'] {
   --my-color: #a3268c;
