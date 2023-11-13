@@ -1,6 +1,9 @@
+import { cookies } from 'next/headers';
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { ClientCookiesProvider } from './CookiesProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,9 +17,20 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+  const initialTheme = 'dark';
+  const cookieStore = cookies()
+
+
+  const theme = cookieStore.get('theme')?.value ?? initialTheme;
+  console.log({zzx: theme});
+
   return (
-    <html lang="en">
+    <ClientCookiesProvider value={cookies().getAll()}>
+
+    <html lang="en" data-theme={theme}>
       <body className={inter.className}>{children}</body>
     </html>
+    </ClientCookiesProvider>
   )
 }
