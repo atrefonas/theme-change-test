@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { ClientCookiesProvider } from './CookiesProvider'
+import { ClientCookiesProvider } from '@/theme/CookiesProvider'
 import ThemeComponent from '@/theme/ThemeComponent';
 import ThemeProvider from '@/theme/ThemeComponent';
 
